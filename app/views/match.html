@@ -1,0 +1,12 @@
+<div class="row">
+	<ol class="breadcrumb">
+		<li><a href="#/">Actualités du Football</a></li>
+		<li class="active">{{league}}</li>
+	</ol>
+
+	<div class="alert alert-info" role="alert" ng-repeat="item in items">
+		<a ng-href="{{item.link}}" title="{{item.title}}" target="_blank"><span class="glyphicon glyphicon-link"></span> {{item.title}}</a> 
+		<span class="dark pull-right">{{formatRssDate(item.pubDate)}}</span>
+		<div class="clearer"></div>
+	</div>
+</div>

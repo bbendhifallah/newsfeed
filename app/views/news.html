@@ -1,0 +1,21 @@
+<h3 class="blue">Les actualités du Football</h3>
+<div class="row" ng-repeat="items in rows">
+	<div class="col-md-4" ng-repeat="item in items">
+		<div class="panel panel-01">
+			<div class="panel-heading">
+				<h3 class="panel-title">
+					<strong>{{item.title}}</strong>
+				</h3>
+			</div>
+			<div class="panel-body">
+				<h6>{{item.pubDate}}</h6>
+				<img ng-src="{{item.image}}" alt="{{item.title}}" title="{{item.title}}" /> {{item.description | limitTo: 65 }} ...
+				<p class="mb10">
+					<a ng-click="selectItem(item)" href="javascript:void(0);" class="btn btn-default pull-right">
+						<span class="glyphicon glyphicon-link"></span> Lire plus »
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

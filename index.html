@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="feedApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="shortcut icon" href="assets/ico/favicon.ico">
+		<title>Footbal News - Aggrégateur des news du Football</title>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span> 
+					</button>
+					<span class="navbar-brand"><b>Footbal News</b></span>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#/">News</a></li>
+						<li class=""><a href="#/match/france">France</a></li>
+						<li class=""><a href="#/match/spain">Espagne</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="headerwrap">
+			<div class="container">
+				<h1>Footbal News</h1>
+				<h2>Aggrégateur des news du Football</h2>
+			</div>
+		</div>
+		<div class="container"> 
+			<div ng-view></div>
+		</div>
+
+		<div id="footerwrap">        
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Football News &copy; 2016 - Tous droits réservés</p>
+					</div>
+				</div>      
+			</div>
+		</div>
+		
+		<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
+		<script src="assets/js/jquery-2.2.3.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+
+		<script src="app/scripts/angular.min.js"></script>
+		<script src="app/scripts/angular-route.min.js"></script>
+		<script src="app/scripts/angular-cookies.min.js"></script>
+		<script src="app/scripts/functions.js"></script>
+
+		<script src="app/app.js"></script>
+
+		<script src="app/services/NewsService.js"></script>
+		<script src="app/services/DetailsService.js"></script>
+		<script src="app/services/MatchService.js"></script>
+
+		<script src="app/controllers/NewsController.js"></script>
+		<script src="app/controllers/DetailsController.js"></script>
+		<script src="app/controllers/MatchController.js"></script>
+	</body>
+</html>
